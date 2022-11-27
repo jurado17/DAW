@@ -11,9 +11,9 @@
 		<th>Actividad 1</th>
 		<th>Servidores Web</th>
 	</tr>
-</table
+</table>
 
-<h2>Tema 1 - Servidoress Web</h2>
+<h2>Tema 1 - Servidores Web</h2>
 <table>
 	<tr>
 		<th>Actividades</th>
@@ -25,10 +25,7 @@
 	</tr>
 </table>
 
-<h2>
-Práctica Servidores web
-1º trimestre
-</h2>
+<h2>Práctica Servidores web1º trimestre</h2>
 <table>
 	<tr>
 		<th>Actividades</th>
