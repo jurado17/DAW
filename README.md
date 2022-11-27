@@ -4,11 +4,11 @@
 <h2>Tema 0 - Introducción</h2>
 <table>
 	<tr>
-		<th>Actividad 1</th>
+		<th>Actividades</th>
 		<th>Descripción</th>
 	</tr>
 	<tr>
-		<th>Practica 1</th>
+		<th>Actividad 1</th>
 		<th>Servidores Web</th>
 	</tr>
 </table
@@ -16,7 +16,7 @@
 <h2>Tema 1 - Servidoress Web</h2>
 <table>
 	<tr>
-		<th>Actividad 1</th>
+		<th>Actividades</th>
 		<th>Descripción</th>
 	</tr>
 	<tr>
@@ -31,7 +31,7 @@ Práctica Servidores web
 </h2>
 <table>
 	<tr>
-		<th>Actividad 1</th>
+		<th>Actividades</th>
 		<th>Descripción</th>
 	</tr>
 	<tr>
