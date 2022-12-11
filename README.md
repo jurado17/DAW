@@ -25,7 +25,7 @@
 	</tr>
 </table>
 
-<h2>Práctica Servidores web1º trimestre</h2>
+<h2>Práctica Servidores web 1º trimestre</h2>
 <table>
 	<tr>
 		<th>Actividades</th>
