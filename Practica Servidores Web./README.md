@@ -19,8 +19,7 @@
 
 <p>1.1.- Instalación Servidor Apache </p>
 <p>Actualizamos el sistema antes de instalar el Servidor Web Apache</p>
-<p>![image](https://user-images.githubusercontent.com/91670482/207171371-b131bdec-31b8-46f1-a426-03a57a346fe5.png)
-</p>
+<img src="https://github.com/jurado17/DAW/blob/main/Practica%20Servidores%20Web./imagenes/Captura%20de%20pantalla%202022-12-12%20234917.jpg">
 
 <p>1.2.- Instalación My SQL y PHP</p>
 
