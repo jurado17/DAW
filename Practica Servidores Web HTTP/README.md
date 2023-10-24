@@ -1257,4 +1257,27 @@ if __name__ == '__main__':
 ```
 Al compilar este codigo obtenemos lo siguiente:
 
+<image src="https://github.com/jurado17/DAW/blob/main/Practica%20Servidores%20Web%20HTTP/img/ejemplo%201.png">
+
+### Ejemplo 3
+
+Probamos el tercer codigo de ejemplo:
+
+```python
+import http.server
+import socketserver
+
+PORT = 8000
+
+Handler = http.server.SimpleHTTPRequestHandler
+
+with socketserver.TCPServer(("", PORT), Handler) as httpd:
+    print("serving at port", PORT)
+    httpd.serve_forever()
+```
+
+Obtenemos este resltado en la consola:
+
 <image src="">
+
+
