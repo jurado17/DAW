@@ -9,7 +9,7 @@
 	</tr>
 	<tr>
 		<th>Actividad 1</th>
-		<th>Servidores Web</th>
+		<th><a href="https://github.com/jurado17/DAW/blob/main/Practica%20Servidores%20Web%20HTTP/README.md">Servidor HTTP</a></th>
 	</tr>
 </table>
 
