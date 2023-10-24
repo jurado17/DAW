@@ -1278,6 +1278,6 @@ with socketserver.TCPServer(("", PORT), Handler) as httpd:
 
 Obtenemos este resltado en la consola:
 
-<image src="">
+<image src="https://github.com/jurado17/DAW/blob/main/Practica%20Servidores%20Web%20HTTP/img/ejemplo%203.png">
 
-
+Si nos damos cuenta todos estos ejemplos son maneras distintas de iniciar un servidor HTTP en puerto 8000.
