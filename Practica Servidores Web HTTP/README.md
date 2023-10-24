@@ -43,7 +43,7 @@ Al compilar este codigo nos saldra esto:
 Probamos el segundo codigo de ejemplo:
 
 ```python
-"""HTTP server classes.
+HTTP server classes.
 Note: BaseHTTPRequestHandler doesn't implement any HTTP request; see
 SimpleHTTPRequestHandler for simple implementations of GET, HEAD and POST,
 and CGIHTTPRequestHandler for CGI scripts.
@@ -1254,4 +1254,7 @@ if __name__ == '__main__':
         bind=args.bind,
         protocol=args.protocol,
     )
-´´´
+```
+Al compilar este codigo obtenemos lo siguiente:
+
+<image src="">
