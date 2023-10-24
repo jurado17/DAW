@@ -12,8 +12,8 @@ Si no, accedemos a la pagina web de pagina web de Python para instalarlo.
 Ahora vamos a probar diferentes codigos python en nuestro servidor para iniciarlo.
 
 Probamos el primer codigo:
-bash´´´
-import http.server as httpserver
+```python
+		import http.server as httpserver
 import socketserver
 
 def main(port=None):
@@ -29,4 +29,5 @@ def main(port=None):
 
 if __name__ == '__main__':
 	main()
-```
+		
+		```
