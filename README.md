@@ -13,17 +13,6 @@
 	</tr>
 </table>
 
-<h2>Tema 1 - Servidores Web</h2>
-<table>
-	<tr>
-		<th>Actividades</th>
-		<th>Descripción</th>
-	</tr>
-	<tr>
-		<th>Scripts</th>
-		<th>Crear Scrpits para modificar diferentes archivos</th>
-	</tr>
-</table>
 
 <h2>Práctica Servidores web 1º trimestre</h2>
 <table>
