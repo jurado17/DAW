@@ -22,6 +22,6 @@
 	</tr>
 	<tr>
 		<th>Practica 1º Trimestre</th>
-		<th><a href="https://github.com/jurado17/DAW/blob/main/Practica%20Servidores%20Web./README.md"></a></th>
+		<th><a href="https://github.com/jurado17/DAW/blob/main/Practica%20Servidores%20Web./README.md">Practica 1º Trimestre</a></th>
 	</tr>
 </table>
