@@ -1,4 +1,4 @@
-# Despluegue de Aplicaciones Web
+# Despliegue de Aplicaciones Web
 <p>Este repositorio contiene las activides realizas en el módulo de DAW</p>
 
 <h2>Tema 0 - Introducción</h2>
@@ -22,6 +22,6 @@
 	</tr>
 	<tr>
 		<th>Practica 1º Trimestre</th>
-		<th></th>
+		<th><a href="https://github.com/jurado17/DAW/blob/main/Practica%20Servidores%20Web./README.md"></a></th>
 	</tr>
 </table>
