@@ -51,8 +51,8 @@ Una vez dentro añadimos las siguientes líneas
 127.0.0.1  departamentos.centro.intranet
 ```
 
-### 1.4. Instalacion y Configuración de Worpress
-#### 1.4.1 Instalar Wordpress
+# 2. Instalacion y Configuración de Worpress
+### 2.1 Instalar Wordpress
 Como ya tenemos instalado PHP, Apache y MySQL pasamos a crear nuestra base de datos para wordpress
 Acedemos a MySQL
 ```bash
@@ -79,7 +79,7 @@ Y movemos la carpeta de Wordpress a la carpeta del servidor
 ```bash
 sudo mv wordpress /var/www/html/
 ```
-#### 1.4.2. Configurar Wordpress
+### 2.2. Configurar Wordpress
 Para configurar wordpress vamos adirigirnos a la carpeta de wordpress, copiamos el archivo de configuración y lo editamos
 
 ```bash
@@ -94,14 +94,14 @@ define('DB_USER', 'luis');
 define('DB_PASSWORD', '12345');
 define('DB_HOST', 'localhost');
 ```
-#### 1.4.3. Permisos
+### 2.3. Permisos
 Para terminar la configuracion ajustamos los permisos de los archivos y las carpetas y reiniciamos apache
 ```bash
 sudo chown -R www-data:www-data /var/www/html/wordpress
 sudo chmod -R 755 /var/www/html/wordpress
 sudo systemctl restart apache2
 ```
-### 1.5. Configuración de WordPress en Apache para centro.intranet y departamentos.centro.intranet
+### 2.4. Configuración de WordPress en Apache para centro.intranet y departamentos.centro.intranet
 #### 1.5.1 Centro.intranet
 Habiendo ya instalado Wordpress, creamos un nuevo archivo de configuracion para 'centro.intranet'
 ```bash
@@ -129,7 +129,7 @@ Guardamos y habilitamos el sitio y reiniciamos apache para aplicar los cambios.
 sudo a2ensite centro.intranet.conf
 sudo systemctl restart apache2
 ```
-#### 1.5.2 Departamnetos.centro.intranet
+### 2.5. Departamnetos.centro.intranet
 Para configurar departamentos.centro.intranet tendremos que realizar los mismos pasos de antes.
 
 ```bash
@@ -157,43 +157,4 @@ Guardamos y habilitamos el sitio y reiniciamos apache para aplicar los cambios.
 sudo a2ensite departamentos.centro.intranet.conf
 sudo systemctl restart apache2
 ```
-### 1.6. Activar el modulo 'wsgi'
-En el proyecto se pide utillizar el modulo 'wsgi', pero esta obsoleto, por lo que utilizaremos otra version mas moderna que es el 'uwsgi'.
-
-Para activa este modulo primero debemos instalarlo usando este codigo:
-```bash
-sudo apt install uwsgi
-```
-Una vez instalado vamos a proceder a configurar el modulo para nustra aplicacion Python.
-
-#### Configurar UWSGI
-Debemos crear un archivo de configuracion con el nombre 'departamentos_uwsgi.ini'
-```bash
-sudo nano departamentos_uwsgi.ini
-```
-Una vez dentro añadimos las siguientes lineas:
-```ini
-[uwsgi]
-http-timeout = 86400
-http-timeout-keepalive = 86400
-
-module = app:application
-master = true
-processes = 5
-socket = /tmp/departamentos_uwsgi.sock
-chmod-socket = 660
-vacuum = true
-die-on-term = true
-```
-
-Ejecutamos uwsgi con el archivo de configuracion proporcionado
-```bash
-uwsgi --ini departamentos_uwsgi.ini
-```
-Habilitamos el VirualHost y reiniciamos Apache
-```bash
-sudo a2ensite deparatamentos.centro.intranet.conf
-sudo systemctl restart apache2
-```
-
-
+# 3. Activar el modulo 'wsgi'
