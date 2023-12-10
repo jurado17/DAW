@@ -42,7 +42,6 @@ php -v
 Ahora crearemos los dominio y para ello tenemos que dirigirnos al fichero **/etc/hosts**, e introducimos el sigiuente comando:
 
 ```bash
-cd /etc/hosts
 sudo nano /etc/hosts
 ```
 Una vez dentro añadimos las siguientes líneas
