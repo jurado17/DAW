@@ -63,7 +63,7 @@ Y ecribimos el siguiente codigo
 sudo mysql
 mysql> CREATE DATABASE wordpressdb;
 mysql> CREATE USER 'luis'@'localhost' IDENTIFIED BY '12345';
-mysql> GRANT ALL PRIVILEGES ON 'wordpress'@'%' WHITH GRANT OPTION;
+mysql> GRANT ALL PRIVILEGES ON 'luis'@'localhost' WHITH GRANT OPTION;
 mysql> FLUSH PRIVILEGES;
 EXIT;
 ```
