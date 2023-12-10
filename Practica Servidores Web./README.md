@@ -63,19 +63,19 @@ Y ecribimos el siguiente codigo
 sudo mysql
 mysql> CREATE DATABASE wordpressdb;
 mysql> CREATE USER 'luis'@'localhost' IDENTIFIED BY '12345';
-mysql> GRANT ALL PRIVILEGES ON 'luis'@'localhost' WHITH GRANT OPTION;
+mysql> GRANT ALL PRIVILEGES ON wordpressdb.* TO 'luis'@'localhost' WITH GRANT OPTION;
 mysql> FLUSH PRIVILEGES;
 EXIT;
 ```
 Creamos una carpeta en /var/www/html llamada centro.intranet
 ```shell
 cd /var/www/html
-mkdir centro.intranet
+sudo mkdir centro.intranet
 ```
 Ahora pasamos a descargar la ultima version de wordpress desde la pagina oficial y descomprimimos el archivo
 ```bash
-wget -c https://wordpress.org/latest.tar.gz
-tar -zxvf latest.tar.gz
+sudo wget -c https://wordpress.org/latest.tar.gz
+sudo tar -zxvf latest.tar.gz
 ```
 Cambiamos los permisos de la carpeta y reiniciamos apache
 ```shell
