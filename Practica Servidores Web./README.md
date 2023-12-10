@@ -128,8 +128,8 @@ Creamos una carpeta donde estara nuestro archivo de python. esta estara en var/w
 ```shell
 cd /var/www/html
 
-mkdir departamentos.centro.intranet
-nano app.py 
+sudo mkdir departamentos.centro.intranet
+sudo nano app.py 
 ```
 Guardamos y ahora le daremos los permisos a la carpeta
 
@@ -143,6 +143,7 @@ En etc/apache2/sites-available creamos en .conf, y pondremos lla pagina en los s
 sudo nano departamentos.centro.intranet.conf
 
 <VirtualHost *:80>
+    ServerAdmin luis@localhost
     ServerName departamentos.centro.intranet
     DocumentRoot /var/www/html/departamentos.centro.intranet
     WSGIScriptAlias / /var/www/html/departamentos.centro.intranet/app.py
