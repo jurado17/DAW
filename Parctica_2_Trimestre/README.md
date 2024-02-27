@@ -33,7 +33,7 @@ Primero actualizamos el sistema operativo y todos los paquetes:
 sudo apt update && sudo apt upgrade
 ```
 
-![](Parctica_2_Trimestre/img/c1.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c1.png)
 
 Y luedo instalaremos Apache:
 
