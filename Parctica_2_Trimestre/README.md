@@ -176,7 +176,7 @@ sudo apt-get install vsftpd
 
 ![](/img/c13.png)
 
-### Creación de la BAse de Generar certifiado TLS
+### Generar certifiado TLS
 
 Esto es importante para que la conexion sea segura. Para hacerlo usaremos un comando que nos generara un certificado autofirmado que para uso interno es seguro:
 
@@ -266,7 +266,7 @@ sudo systemctl status ssh
 
 ## Scripts para automatizar el proceso
 
-### Creación de la BAse de Creacion de usurario y directorio correspondiente para el alojamiento web
+### Creacion de usurario y directorio correspondiente para el alojamiento web
 
 Este script te pedira el nombre,el subdominio y la ip para configuraciones de despues y creara el usuario con su directorio,recordar que cuando creamos el usuario si lo hemos instalado y configurado correctatmente se crearan los usuarios ftp y ssh automaticamente.
 
@@ -285,7 +285,7 @@ Este script te pedira el nombre,el subdominio y la ip para configuraciones de de
 
 ![](/img/c22.png)
 
-### Creación de la BAse de Creación del host virtual
+### Creación del host virtual
 
 Esta parte del script creara el archivo del sitio que hemos creado y habilitara el sitio para que se pueda acceder
 
@@ -306,9 +306,9 @@ Esta parte del script creara el archivo del sitio que hemos creado y habilitara 
 
 ![](/img/c23.png)
 
-### Creación de la BAse de DNS
+### DNS
 
-Aqui tenemos la parte de nuestro script encargada del DNS que nos generara la zona directa e inversa de nuestro subdominio
+Aqui tenemos la parte del DNS que nos generara la zona directa e inversa del subdominio
 
 ```bash
 	#BIND
@@ -345,7 +345,7 @@ Aqui tenemos la parte de nuestro script encargada del DNS que nos generara la zo
 
 ### Creación de la Base de Datos
 
-Esta parte del script creara un usuario con la contraseña password,tambien creara su base de datos y le dara los privilegios
+Esta parte del script creara un usuario, su base de datos y le dara los privilegios
 
 ```bash
 	#Crear una base de datos y un usuario con todos los permisos
@@ -355,7 +355,7 @@ Esta parte del script creara un usuario con la contraseña password,tambien crea
 
 ![](/img/c25.png)
 
-### Habilitar Python para que puedas ejecutar aplicaciones
+### Habilitar Python
 
 Primero deberemos instalar el modulo wsgi con este comando:
 
@@ -365,16 +365,12 @@ Primero deberemos instalar el modulo wsgi con este comando:
 
 ![](/img/c29.png)
 
-Esta parte del script habilitara el modulo para ejecutar aplicaciones aplicaciones de python
+Esta parte del script que habilita y deshabilita el modulo para ejecutar aplicaciones aplicaciones python
 
 ```bash
 	#Habilitar la ejecución de aplicaciones Python con el servidor web
 	a2enmod wsgi
-```
 
-Tambien hice un script que lo deshabilita por si fuera necesario:
-
-```bash
 	#Deshabilitar la ejecución de aplicaciones Python con el servidor web
 	sudo a2dismod wsgi
 ```
