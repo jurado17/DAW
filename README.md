@@ -34,7 +34,7 @@
 	</tr>
 	<tr>
 		<th>Servidor alojamiento web</th>
-		<th><a href="Parctica_2_Trimestre/README.md">Practica 1º Trimestre</a></th>
+		<th><a href="Parctica_2_Trimestre">Practica 2º Trimestre</a></th>
 	</tr>
 </table>
 
