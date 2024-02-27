@@ -33,7 +33,7 @@ Primero actualizamos el sistema operativo y todos los paquetes:
 sudo apt update && sudo apt upgrade
 ```
 
-![](/img/c1.png)
+![](Parctica_2_Trimestre/img/c1.png)
 
 Y luedo instalaremos Apache:
 
