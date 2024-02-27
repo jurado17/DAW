@@ -41,7 +41,7 @@ Y luedo instalaremos Apache:
 sudo apt install apache2
 ```
 
-![](/img/c2.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c2.png)
 
 Verificamos que se haya instalado correctamente con el siguiente comando
 
@@ -49,7 +49,7 @@ Verificamos que se haya instalado correctamente con el siguiente comando
 sudo systemctl status apache2
 ```
 
-![](/img/c3.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c3.png)
 
 En caso de tener un firewall habilitado, utilizaremos este comando para permitir a los clientes conectarse al servidor
 
@@ -59,7 +59,7 @@ sudo ufw allow 'Apache'
 
 Puedes verificar que Apache esté funcionando correctamente abriendo un navegador web y navegando a http://localhost o http://127.0.0.1.
 
-![](/img/c4.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c4.png)
 
 ## Instalación de PHP
 
@@ -71,14 +71,14 @@ Actualizaremos el sistema operativo y los paquetes existentes ejecutando el sigu
 sudo apt update && sudo apt upgrade
 ```
 
-![](/img/c5.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c5.png)
 Ahora instalamos PHP y los modulos que necesitamos:
 
 ```bash
 sudo apt install php libapache2-mod-php php-mysql
 ```
 
-![](/img/c6.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c6.png)
 
 Verificamos que PHP se haya instalado correctamente con este comando:
 
