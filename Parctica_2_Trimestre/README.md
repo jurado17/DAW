@@ -88,7 +88,7 @@ php -v
 
 Deberia salir algo como esto
 
-![](/img/c7.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c7.png)
 
 Y para que se terminen de aplicar los cambios reiniciamos el servidor Apache
 
@@ -110,7 +110,7 @@ E instalamos sql con este comando:
 sudo apt install mysql-server
 ```
 
-![](/img/c8.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c8.png)
 
 Nos pedira una contraseña para el usuario root,le puedes poner la que quieras pero recuerdala,luego iniciaremos el servicio con:
 
@@ -124,7 +124,7 @@ Y comprobamos que se haya instalado correctamente con este comando:
 sudo systemctl status mysql
 ```
 
-![](/img/c9.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c9.png)
 
 ## Instalación de PhpMyadmin
 
@@ -140,15 +140,15 @@ E instalamos phpmyadmin con este comando:
 sudo apt install phpmyadmin
 ```
 
-![](/img/c10.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c10.png)
 
 Cuando lo instalemos nos preguntaran si queremos configurarlo le daremos que si y nos dira si queremos intalar la base de datos volveremos a confirmar:
 
-![](/img/c11.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c11.png)
 
 Luego nos pedira contraseña la introduciremos y cuando lo hagamos el proceso de instalación habrá acabado y ya tendremos instalado phpmyadmin:
 
-![](/img/c12.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c12.png)
 
 Después reiniciamos apache para poder acceder a phpmyadmin
 
@@ -174,7 +174,7 @@ Luego instalaremos el servidor vsftpd:
 sudo apt-get install vsftpd
 ```
 
-![](/img/c13.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c13.png)
 
 ### Generar certifiado TLS
 
@@ -184,7 +184,7 @@ Esto es importante para que la conexion sea segura. Para hacerlo usaremos un com
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.pem -out /etc/ssl/private/vsftpd.pem
 ```
 
-![](/img/c14.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c14.png)
 
 Ahora accedemos a la configuracion del servidor:
 
@@ -192,7 +192,7 @@ Ahora accedemos a la configuracion del servidor:
 sudo nano /etc/vsftpd.conf
 ```
 
-![](/img/c16.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c16.png)
 
 Y añaderemos unas lineas al final del codigo para que los clienten puedan conectarse:
 
@@ -208,7 +208,7 @@ ssl_sslv3=NO
 rsa_cert_file=/etc/ssl/private/vsftpd.pem
 ```
 
-![](/img/c15.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c15.png)
 
 Por ultimo reiniciaremos el servicio vsftpd
 
@@ -230,7 +230,7 @@ E instalamos el servicio openssh server:
 sudo apt-get install openssh-server
 ```
 
-![](/img/c18.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c18.png)
 
 Accedemos al archivo de configuración para activar el puerto 22 eliminando el #:
 
@@ -238,17 +238,16 @@ Accedemos al archivo de configuración para activar el puerto 22 eliminando el #
 sudo nano /etc/ssh/sshd_config
 ```
 
-![](/img/c20.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c20.png)
 
-![](/img/c19.png)
-
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c19.png)
 Por ultimo reiniciaremos el servicio para que aplique las configuraciones y active el puerto
 
 ```bash
 sudo systemctl restart ssh
 ```
 
-![](/img/c17.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c17.png)
 
 Si tenemos problemas tendremos que ver si el firewall permite las conexiones ssh por ese puerto. En caso de que lo haga, usamos este comando:
 
@@ -262,7 +261,7 @@ Podemos comprobar que todo este correcto usando este comando:
 sudo systemctl status ssh
 ```
 
-![](/img/c21.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c21.png)
 
 ## Scripts para automatizar el proceso
 
@@ -283,7 +282,7 @@ Este script te pedira el nombre,el subdominio y la ip para configuraciones de de
 	useradd -m -d /var/www/$subdominio $usuario
 ```
 
-![](/img/c22.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c22.png)
 
 ### Creación del host virtual
 
@@ -304,7 +303,7 @@ Esta parte del script creara el archivo del sitio que hemos creado y habilitara 
 	sudo a2ensite $nombre.conf
 ```
 
-![](/img/c23.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c23.png)
 
 ### DNS
 
@@ -341,7 +340,7 @@ Aqui tenemos la parte del DNS que nos generara la zona directa e inversa del sub
 	sudo systemctl restart bind9
 ```
 
-![](/img/c24.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c24.png)
 
 ### Creación de la Base de Datos
 
@@ -353,7 +352,7 @@ Esta parte del script creara un usuario, su base de datos y le dara los privileg
 	GRANT ALL PRIVILEGES ON $usuario.* TO '$usuario'@'localhost'; FLUSH PRIVILEGES;"
 ```
 
-![](/img/c25.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c25.png)
 
 ### Habilitar Python
 
@@ -363,7 +362,7 @@ Primero deberemos instalar el modulo wsgi con este comando:
 	sudo apt-get install libapache2-mod-wsgi-py3
 ```
 
-![](/img/c29.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c29.png)
 
 Esta parte del script que habilita y deshabilita el modulo para ejecutar aplicaciones aplicaciones python
 
@@ -375,7 +374,7 @@ Esta parte del script que habilita y deshabilita el modulo para ejecutar aplicac
 	sudo a2dismod wsgi
 ```
 
-![](/img/c26.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c26.png)
 
 
 Por ultimo un menu para poder escoger la opción que quiera el usuario
@@ -403,7 +402,7 @@ echo "Buenos dias ¿que desea hacer hoy?"
 		esac
 ```
 
-![](/img/c28.png)
+![](https://github.com/jurado17/DAW/blob/main/Parctica_2_Trimestre/img/c28.png)
 
 ### Script completo
 
