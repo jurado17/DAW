@@ -31,7 +31,7 @@ Share images, automate workflows, and more with a free Docker ID:
 For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
-
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%202/img/c1.png)
 
 Si listamos los contenedores que se están ejecutando (`docker ps`):
 
@@ -48,7 +48,7 @@ $ docker ps -a
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES
 372ca4634d53        hello-world         "/hello"            8 minutes ago       Exited (0) 8 minutes ago                       elastic_johnson
 ```
-
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%202/img/c2.png)
 ## Parte 2 del ejercicio
 
 Ahora procederemos a crear nuestra imagen y subirla. Vayamos por puntos.
@@ -60,7 +60,7 @@ Para ello vamos a necesitar tener instalado git.
 ```bash
 sudo apt-get install git
 ```
-
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%202/img/c3.png)
 Obtener la app
 Ahora que tenemos la git vamos a clonar la app.
 
