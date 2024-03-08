@@ -56,7 +56,7 @@ sudo docker run -d --name temperaturas-backend --network red_temperaturas iesgn/
 ```
 sudo docker run -d -p 80:3000 --name temperaturas-frontend --network red_temperaturas iesgn/temperaturas_frontend
 ```
-
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%204/img/c18.png)
 
 Ahora que tenemos los contenedores listos vamos a ver la aplicación corriendo.
 ![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%204/img/c8.png)
@@ -75,7 +75,7 @@ Tendremos que configurar la aplicación `frontend` parea que acceda al `backend`
 ```
 sudo docker run -d -p 80:3000 --name temperaturas-frontend -e TEMP_SERVER=temperaturas-api:5000 --network red_temperaturas iesgn/temperaturas_frontend
 ```
-
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%204/img/c10.png)
 Si volvemos a ver la aplicación veremos que sigue funcionando correctamente.
 
 ## Ejemplo 3. Despliegue de Wordpress + mariadb
@@ -90,7 +90,7 @@ Ambos contenedores necesitan estar en la misma red.
 ```
 sudo docker network create red_wp
 ```
-
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%204/img/c13.png)
 A continuación necesitamos crear los contenedores con sus respectivas variables de entorno, para ello vamos a seguir la documentación de cada imagen.
 
 ```
@@ -102,7 +102,9 @@ sudo docker run -d --name servidor_mysql \
                 -e MYSQL_PASSWORD=asdasd \
                 -e MYSQL_ROOT_PASSWORD=asdasd \
                 mariadb
-                
+```
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%204/img/c14.png)
+```                
 sudo docker run -d --name servidor_wp \
                 --network red_wp \
                 -v /opt/wordpress:/var/www/html/wp-content \
@@ -113,5 +115,6 @@ sudo docker run -d --name servidor_wp \
                 -p 80:80 \
                 wordpress
 ```
-
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%204/img/c15.png)
 Ahora que tenemos los contenedores listos vamos a ver la aplicación corriendo.
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%204/img/c17.png)
