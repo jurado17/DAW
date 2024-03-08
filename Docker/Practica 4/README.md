@@ -31,26 +31,6 @@ sudo docker run -d -p 80:5000 --name guestbook --network red_guestbook iesgn/gue
 Ahora que tenemos los contenedores listos vamos a ver la aplicación corriendo.
 ![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%204/img/c5.png)
 
-### Configuración de la aplicación
-
-En la creación de la imagen `iesgn/guestbook` se ha creado una variable de entorno (llamada `REDIS_SERVER`) donde se configura el nombre del servidor de base de datos redis al que se accede, por defecto el valor de esta variable es `redis`. Por lo tanto, es necesario que el contenedor de la base de datos tenga el nombre redis para que el contenedor de guestbook pueda conectar a la base de datos.
-
-Si creamos un contenedor redis con otro nombre, por ejemplo:
-
-```
-sudo docker run -d --name contenedor_redis --network red_guestbook -v /opt/redis:/data redis redis-server --appendonly yes
-```
-
-Tendremos que configurar la aplicación guestbook parea que acceda a la base de datos redis usando como nombre `contenedor_redis`, por lo tanto en la creación tendremos que definir la variable de entorno `REDIS_SERVER`, para ello ejecutamos:
-
-```
-sudo docker run -d -p 80:5000 --name guestbook -e REDIS_SERVER=contenedor_redis --network red_guestbook iesgn/guestbook
-```
-
-
-Si volvemos a ver la aplicación veremos que sigue funcionando correctamente.
-
-
 
 ## Ejemplo 2. Despliegue de la aplicación Temperaturas.
 
@@ -66,18 +46,20 @@ Vamos a crear una red para conectar los dos contenedores:
 ```
 sudo docker network create red_temperaturas
 ```
-
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%204/img/c6.png)
 Para ejecutar los contendores:
 
 ```
 sudo docker run -d --name temperaturas-backend --network red_temperaturas iesgn/temperaturas_backend
-
+```
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%204/img/c7.png)
+```
 sudo docker run -d -p 80:3000 --name temperaturas-frontend --network red_temperaturas iesgn/temperaturas_frontend
 ```
 
 
 Ahora que tenemos los contenedores listos vamos a ver la aplicación corriendo.
-
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%204/img/c8.png)
 ### Configuración de la aplicación.
 
 En la creación de la imagen `iesgn/temperaturas_frontend` se ha creado una variable de entorno (llamada `TEMP_SERVER`) donde se configura el nombre del servidor y el puerto de acceso del microservicio `frontend` y que debe corresponder con el nombre y el puerto del microservicio `backend`. Por defecto esta variable tiene como valor `temperaturas-backend:5000`, por lo tanto, es necesario que el contenedor del backend se llame `temperaturas-backend` y debe ofrecer el servicio en el puerto `5000`.
@@ -87,7 +69,7 @@ Si creamos otro contendor `backend` con otro nombre, por ejemplo:
 ```
 sudo docker run -d --name temperaturas-api --network red_temperaturas iesgn/temperaturas_backend
 ```
-
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%204/img/c9.png)
 Tendremos que configurar la aplicación `frontend` parea que acceda al `backend` usando como nombre `temperaturas-api`, por lo tanto en la creación tendremos que definir la variable de entorno `TEMP_SERVER`, para ello ejecutamos:
 
 ```
