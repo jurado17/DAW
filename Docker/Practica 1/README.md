@@ -4,7 +4,7 @@ Actualizamos los repositorios e instalamos los paquetes necesarios para instalar
 
         sudo apt-get update
         sudo apt-get install ca-certificates curl gnupg
-
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%201/img/c1.png)
 Añadir la clave GPG oficial de Docker:
 
 ```bash
