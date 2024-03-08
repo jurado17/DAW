@@ -67,7 +67,9 @@ Ahora que tenemos la git vamos a clonar la app.
 ```bash
 sudo git clone https://github.com/docker/getting-started-app.git
 ```
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%202/img/c14.png)
 
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%202/img/c5.png)
 Ahora vamos a crear el fichero Dockerfile.
 
 ```bash
@@ -80,24 +82,24 @@ RUN yarn install --production
 CMD ["node", "src/index.js"]
 EXPOSE 3000
 ```
-
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%202/img/c6.png)
  ### Construir la imagen
 Para construir la imagen de nuestra app vamos a ejecutar el siguiente comando:
 
 ```bash
 sudo docker build -t getting-started .
 ```
-
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%202/img/c7.png)
 ### Iniciar el contenedor
 Ahora que tenemos nuestra imagen vamos a ejecutar el comando docker run para inciar el contenedor. Tenemos que indicarle la imagen que queremos usar para crear el contenedor.
 
 ```bash
 sudo docker run -dp 127.0.0.1:3000:3000 getting-started
 ```
-
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%202/img/c8.png)
 ### Probar la app
 Para probar la app vamos a ir al navegador y ponermos localhost:3000.
-
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%202/img/c9.png)
 ## Publicar la imagen a Docker Hub
 Para publicar nuestra imagen primero debemos tener una cuenta en Docker Hub, Crear cuenta en Docker Hub
 
@@ -106,8 +108,10 @@ Ahora en la terminal vamos a tener que iniciar sesión.
 ```bash
 sudo docker tag getting-started TU-USUARIO/getting-started
 ```
-
 Por último, vamos a hacer un docker push.
 ```bash
 sudo docker push TU-USUARIO/getting-started
 ```
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%202/img/c13.png)
+
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%202/img/c10.png)![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%202/img/c11.png)![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%202/img/c12.png)
