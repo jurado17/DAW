@@ -16,6 +16,7 @@ Los dos contenedores tienen que estar en la misma red y deben tener acceso por n
 ```
 sudo docker network create red_guestbook
 ```
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%204/img/c1.png)
 
 Para ejecutar los contenedores:
 
@@ -24,10 +25,11 @@ sudo docker run -d --name redis --network red_guestbook -v /opt/redis:/data redi
 
 sudo docker run -d -p 80:5000 --name guestbook --network red_guestbook iesgn/guestbook
 ```
-
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%204/img/c2.png)
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%204/img/c3.png)
 
 Ahora que tenemos los contenedores listos vamos a ver la aplicación corriendo.
-
+![](https://github.com/jurado17/DAW/blob/main/Docker/Practica%204/img/c5.png)
 
 ### Configuración de la aplicación
 
